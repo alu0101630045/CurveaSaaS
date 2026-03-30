@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/servidor_api.dir/src/main.cpp.o CMakeFiles/servidor_api.dir/src/router/Router.cpp.o CMakeFiles/servidor_api.dir/src/math/ExpressionParser.cpp.o CMakeFiles/servidor_api.dir/src/math/FunctionAnalyzer.cpp.o -o servidor_api 

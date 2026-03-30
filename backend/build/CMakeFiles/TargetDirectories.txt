@@ -1,0 +1,3 @@
+/workspaces/CurveaSaaS/backend/build/CMakeFiles/servidor_api.dir
+/workspaces/CurveaSaaS/backend/build/CMakeFiles/edit_cache.dir
+/workspaces/CurveaSaaS/backend/build/CMakeFiles/rebuild_cache.dir
