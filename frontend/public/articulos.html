@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CurveaSaaS | Articulos</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-requires-auth="true">
+    <div class="site-shell">
+        <header class="site-header">
+            <div>
+                <p class="eyebrow">CurveaSaaS</p>
+                <h2 class="site-title">Publicacion de articulos</h2>
+            </div>
+            <nav class="top-menu" aria-label="Navegacion principal">
+                <a class="menu-link" href="/login.html">Inicio de sesion</a>
+                <a class="menu-link" href="/graficador.html">Graficador</a>
+                <a class="menu-link active" href="/articulos.html">Articulos</a>
+            </nav>
+            <div class="header-right">
+                <span id="currentUser" class="user-label"></span>
+                <button id="btnLogout" class="button-ghost" type="button">Cerrar sesion</button>
+            </div>
+        </header>
+
+        <main class="page-main">
+            <div class="articles-layout">
+                <section class="panel">
+                    <h3>Publicar articulo matematico</h3>
+                    <form id="articleForm" class="article-form" novalidate>
+                        <label for="articleTitle">Titulo del estudio</label>
+                        <input id="articleTitle" type="text" placeholder="Analisis de concavidad y cortes" required>
+
+                        <label for="articleFunction">Funcion estudiada</label>
+                        <div class="row-inline">
+                            <input id="articleFunction" type="text" placeholder="Ej: x^3 - 4*x" required>
+                            <button id="btnUseCurrentFunction" type="button" class="button-ghost">Usar funcion activa</button>
+                        </div>
+
+                        <label for="articleSummary">Resumen</label>
+                        <textarea id="articleSummary" rows="4" placeholder="Objetivo y alcance del estudio" required></textarea>
+
+                        <label for="articleFindings">Conclusiones y resultados</label>
+                        <textarea id="articleFindings" rows="5" placeholder="Resultados, comportamientos y recomendaciones" required></textarea>
+
+                        <label for="articleTags">Etiquetas (separadas por coma)</label>
+                        <input id="articleTags" type="text" placeholder="calculo, asintotas, optimizacion">
+
+                        <button type="submit">Publicar articulo</button>
+                        <p id="articleMessage" class="status"></p>
+                    </form>
+                </section>
+
+                <section class="panel article-feed">
+                    <h3>Articulos publicados</h3>
+                    <p class="subtitle">Publica estudios matematicos a partir de funciones graficadas.</p>
+                    <div id="articleList" class="article-list"></div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="js/nav.js"></script>
+    <script type="module" src="js/articles.js"></script>
+</body>
+</html>

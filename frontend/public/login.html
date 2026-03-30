@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CurveaSaaS | Inicio de sesion</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="site-shell">
+        <header class="site-header">
+            <div>
+                <p class="eyebrow">CurveaSaaS</p>
+                <h2 class="site-title">Plataforma de estudios matematicos</h2>
+            </div>
+            <nav class="top-menu" aria-label="Navegacion principal">
+                <a class="menu-link active" href="/login.html">Inicio de sesion</a>
+                <a class="menu-link" href="/graficador.html">Graficador</a>
+                <a class="menu-link" href="/articulos.html">Articulos</a>
+            </nav>
+            <div class="header-right">
+                <span id="currentUser" class="user-label">Sin sesion</span>
+                <button id="btnLogout" class="button-ghost" type="button">Cerrar sesion</button>
+            </div>
+        </header>
+
+        <main class="page-main login-wrapper">
+            <section class="login-card">
+                <p class="eyebrow">Acceso</p>
+                <h1>Inicia sesion para trabajar</h1>
+                <p class="subtitle">Entra para usar el graficador y publicar articulos sobre tus estudios matematicos.</p>
+
+                <form id="loginForm" class="login-form" novalidate>
+                    <label for="loginUser">Usuario</label>
+                    <input id="loginUser" type="text" placeholder="Ej: ada.lovelace" required>
+
+                    <label for="loginPass">Contrasena</label>
+                    <input id="loginPass" type="password" placeholder="Minimo 4 caracteres" required>
+
+                    <div class="row-inline">
+                        <button type="submit" value="login">Iniciar sesion</button>
+                        <button type="submit" value="register" class="button-ghost">Registrarse</button>
+                    </div>
+                    <p id="loginMessage" class="status"></p>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="js/nav.js"></script>
+    <script type="module" src="js/login.js"></script>
+</body>
+</html>
